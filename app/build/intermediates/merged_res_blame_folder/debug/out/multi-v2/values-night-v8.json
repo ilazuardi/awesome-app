@@ -1,0 +1,73 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\irfan\\AndroidStudioProjects\\AwesomeApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\irfan\\.gradle\\caches\\transforms-3\\b64c581a9daa138f08ffadfeafcf90fd\\transformed\\material-1.4.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,49,50,51,52,53,54,55",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1945,2033,2157,2259,2361,2477,2579,2693,2821,2937,3059,3195,3315,3449,3569,3681,3896,4020,4150,4272,4410,4544,4660",
+                        "endColumns": "87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,123,129,121,137,133,115,119",
+                        "endOffsets": "2028,2152,2254,2356,2472,2574,2688,2816,2932,3054,3190,3310,3444,3564,3676,3802,4015,4145,4267,4405,4539,4655,4775"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\irfan\\.gradle\\caches\\transforms-3\\a41f65a1b182ec9e11a9bbe3d48996cb\\transformed\\appcompat-1.3.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,15,16,17,18,48",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "591,661,745,829,925,1027,1129,3807",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "656,740,824,920,1022,1124,1218,3891"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\irfan\\AndroidStudioProjects\\AwesomeApp\\app\\src\\main\\res\\values-night\\strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "100,135,177,227,283,345,409,469,515,551",
+                        "endColumns": "34,41,49,55,61,63,59,45,35,39",
+                        "endOffsets": "130,172,222,278,340,404,464,510,546,586"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\irfan\\AndroidStudioProjects\\AwesomeApp\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "833"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "1223",
+                        "endLines": "31",
+                        "endColumns": "12",
+                        "endOffsets": "1940"
+                    }
+                }
+            ]
+        }
+    ]
+}

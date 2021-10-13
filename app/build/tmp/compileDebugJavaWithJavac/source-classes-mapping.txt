@@ -1,0 +1,19 @@
+com/irfan/awesomeapp/databinding/ItemListBinding.java
+ com.irfan.awesomeapp.databinding.ItemListBinding
+com/irfan/awesomeapp/databinding/ActivityMainBinding.java
+ com.irfan.awesomeapp.databinding.ActivityMainBinding
+com/irfan/awesomeapp/databinding/ActivityDetailPhotoBinding.java
+ com.irfan.awesomeapp.databinding.ActivityDetailPhotoBinding
+com/irfan/awesomeapp/core/data/source/local/room/PhotoDao_Impl.java
+ com.irfan.awesomeapp.core.data.source.local.room.PhotoDao_Impl
+ com.irfan.awesomeapp.core.data.source.local.room.PhotoDao_Impl$1
+ com.irfan.awesomeapp.core.data.source.local.room.PhotoDao_Impl$2
+com/irfan/awesomeapp/databinding/ItemGridBinding.java
+ com.irfan.awesomeapp.databinding.ItemGridBinding
+com/irfan/awesomeapp/databinding/ContentDetailPhotoBinding.java
+ com.irfan.awesomeapp.databinding.ContentDetailPhotoBinding
+com/irfan/awesomeapp/BuildConfig.java
+ com.irfan.awesomeapp.BuildConfig
+com/irfan/awesomeapp/core/data/source/local/room/AppDatabase_Impl.java
+ com.irfan.awesomeapp.core.data.source.local.room.AppDatabase_Impl
+ com.irfan.awesomeapp.core.data.source.local.room.AppDatabase_Impl$1
