@@ -1,9 +1,10 @@
 package com.irfan.awesomeapp
 
 import androidx.lifecycle.ViewModel
-import com.irfan.awesomeapp.core.data.AwesomeRepository
+import androidx.lifecycle.asLiveData
 import com.irfan.awesomeapp.core.domain.usecase.AwesomeUseCase
+import javax.inject.Inject
 
-class MainViewModel(awesomeUseCase: AwesomeUseCase): ViewModel() {
-    val photo = awesomeUseCase.getAllPhoto()
+class MainViewModel @Inject constructor(awesomeUseCase: AwesomeUseCase): ViewModel() {
+    val photo = awesomeUseCase.getAllPhoto().asLiveData()
 }

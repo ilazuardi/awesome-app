@@ -1,52 +1,38 @@
 package com.irfan.awesomeapp.core.data.source.remote
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.irfan.awesomeapp.core.data.source.remote.network.ApiResponse
 import com.irfan.awesomeapp.core.data.source.remote.network.ApiService
-import com.irfan.awesomeapp.core.data.source.remote.response.ListPhotoResponse
 import com.irfan.awesomeapp.core.data.source.remote.response.PhotosItem
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
+import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
+class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
 
-class RemoteDataSource private constructor(private val apiService: ApiService) {
+    fun getAllPhoto(): Flow<ApiResponse<List<PhotosItem?>?>> {
+
+        return flow {
+            try {
+                val response = apiService.getListPhoto(tokenApi)
+                val dataArray = response.photos
+                if (dataArray!!.isNotEmpty()) {
+                    emit(ApiResponse.Success(response.photos))
+                } else {
+                    emit(ApiResponse.Empty)
+                }
+            } catch (e: Exception) {
+                emit(ApiResponse.Error(e.toString()))
+                Log.e("RemoteDataSource", e.toString())
+            }
+        }.flowOn(Dispatchers.IO)
+    }
 
     companion object {
         const val tokenApi = "563492ad6f91700001000001f010d7b7b3454a949a7dc0d6f811e03f"
-
-        @Volatile
-        private var instance: RemoteDataSource? = null
-
-        fun getInstance(service: ApiService): RemoteDataSource =
-            instance ?: synchronized(this) {
-                instance ?: RemoteDataSource(service)
-            }
-    }
-
-    fun getAllPhoto(): LiveData<ApiResponse<List<PhotosItem?>?>> {
-        val resultData = MutableLiveData<ApiResponse<List<PhotosItem?>?>>()
-
-        val client = apiService.getListPhoto(Companion.tokenApi)
-
-        client.enqueue(object : Callback<ListPhotoResponse> {
-            override fun onResponse(
-                call: Call<ListPhotoResponse>,
-                response: Response<ListPhotoResponse>
-            ) {
-                val dataArray = response.body()?.photos
-                resultData.value = if (dataArray != null) ApiResponse.Success(dataArray) else ApiResponse.Empty
-            }
-
-            override fun onFailure(call: Call<ListPhotoResponse>, t: Throwable) {
-                resultData.value = ApiResponse.Error(t.message.toString())
-                Log.e("RemoteDataSource", t.message.toString())
-            }
-
-        })
-
-        return resultData
     }
 }

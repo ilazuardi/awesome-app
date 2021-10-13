@@ -1,31 +1,23 @@
 package com.irfan.awesomeapp.core.ui
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.irfan.awesomeapp.MainViewModel
-import com.irfan.awesomeapp.core.data.AwesomeRepository
-import com.irfan.awesomeapp.core.di.Injection
 import com.irfan.awesomeapp.core.domain.usecase.AwesomeUseCase
+import com.irfan.awesomeapp.di.AppScope
+import java.lang.IllegalArgumentException
+import javax.inject.Inject
+import javax.inject.Provider
 
-class ViewModelFactory private constructor(private val awesomeUseCase: AwesomeUseCase) : ViewModelProvider.NewInstanceFactory() {
-
-    companion object {
-        @Volatile
-        private var instance: ViewModelFactory? = null
-
-        fun getInstance(context: Context): ViewModelFactory =
-            instance ?: synchronized(this) {
-                instance ?: ViewModelFactory(Injection.provideAwesomeUseCase(context))
-            }
-    }
+@AppScope
+class ViewModelFactory @Inject constructor(
+    private val creators: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>) : ViewModelProvider.Factory {
 
     @Suppress("UNCHECKED_CAST")
-    override fun <T : ViewModel> create(modelClass: Class<T>): T =
-        when {
-            modelClass.isAssignableFrom(MainViewModel::class.java) -> {
-                MainViewModel(awesomeUseCase) as T
-            }
-            else -> throw Throwable("Uknown viewModel class: "+modelClass.name)
-        }
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        val creator = creators[modelClass] ?: creators.entries.firstOrNull {
+            modelClass.isAssignableFrom(it.key)
+        }?.value ?: throw IllegalArgumentException("unknown model class $modelClass")
+        return creator.get() as T
+    }
 }

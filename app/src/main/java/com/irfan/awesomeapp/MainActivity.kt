@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Adapter
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -20,15 +21,23 @@ import com.irfan.awesomeapp.core.ui.PhotoListAdapter.Companion.SPAN_COUNT_TWO
 import com.irfan.awesomeapp.core.ui.ViewModelFactory
 import com.irfan.awesomeapp.databinding.ActivityMainBinding
 import com.irfan.awesomeapp.detail.DetailPhotoActivity
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mainViewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
     private lateinit var gridLayoutManager: GridLayoutManager
     private lateinit var photoAdapter: PhotoListAdapter
 
+    @Inject
+    lateinit var factory: ViewModelFactory
+
+    private val mainViewModel: MainViewModel by viewModels {
+        factory
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        (application as MyApplication).appComponent.inject(this)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -43,9 +52,6 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(DetailPhotoActivity.EXTRA_DATA, selectedData)
             startActivity(intent)
         }
-
-        val factory = ViewModelFactory.getInstance(this)
-        mainViewModel = ViewModelProvider(this, factory)[MainViewModel::class.java]
 
         mainViewModel.photo.observe(this@MainActivity, {
             if (it != null) {
