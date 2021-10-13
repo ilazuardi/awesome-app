@@ -1,4 +1,4 @@
-# awesome-app
+# Awesome App
 Aplikasi generate image dari Pexels API
 
 * This application using :
