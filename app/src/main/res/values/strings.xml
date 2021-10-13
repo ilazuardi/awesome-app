@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Awesome App</string>
+    <string name="_00">00</string>
+    <string name="height">height</string>
+    <string name="width">width</string>
+    <string name="original_size">original size</string>
+    <string name="photographer_name">Photographer Name</string>
+    <string name="image_list">Image List</string>
+    <string name="something_wrong">Something Wrong</string>
+    <string name="taken_by">Taken by</string>
+    <string name="photographer_bio">Photographer Bio</string>
+    <string name="url">url</string>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/item_grid_photo_iv"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_margin="@dimen/_16sdp"
+        android:contentDescription="@string/image_list"
+        android:src="@drawable/ic_baseline_image_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_grid_photographer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="monospace"
+        android:text="@string/photographer_name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_grid_photo_iv" />
+
+    <TextView
+        android:id="@+id/item_grid_original_size_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="monospace"
+        android:text="@string/original_size"
+        android:textSize="@dimen/_6ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_grid_photographer_tv" />
+
+    <TextView
+        android:id="@+id/item_grid_width_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="monospace"
+        android:text="@string/width"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintStart_toStartOf="@+id/item_grid_original_size_label_tv"
+        app:layout_constraintTop_toBottomOf="@+id/item_grid_original_size_label_tv" />
+
+    <TextView
+        android:id="@+id/item_grid_width_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="@string/_00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/item_grid_original_size_label_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_grid_width_label_tv" />
+
+    <TextView
+        android:id="@+id/item_grid_height_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/height"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintStart_toStartOf="@+id/item_grid_original_size_label_tv"
+        app:layout_constraintTop_toBottomOf="@+id/item_grid_width_label_tv" />
+
+    <TextView
+        android:id="@+id/item_grid_height_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="@string/_00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/item_grid_original_size_label_tv"
+        app:layout_constraintTop_toBottomOf="@+id/item_grid_width_label_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_16sdp">
+
+    <ImageView
+        android:id="@+id/item_list_photo_iv"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_16sdp"
+        android:src="@drawable/ic_baseline_image_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/image_list" />
+
+    <TextView
+        android:id="@+id/item_list_photographer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="@string/photographer_name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@+id/item_list_photo_iv"
+        app:layout_constraintTop_toTopOf="@+id/item_list_photo_iv" />
+
+    <TextView
+        android:id="@+id/item_list_original_size_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="@string/original_size"
+        android:textSize="@dimen/_6ssp"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toStartOf="@+id/item_list_photographer_tv"
+        app:layout_constraintTop_toBottomOf="@+id/item_list_photographer_tv" />
+
+    <TextView
+        android:id="@+id/item_list_width_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="@string/width"
+        android:textSize="@dimen/_8ssp"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toStartOf="@+id/item_list_photographer_tv"
+        app:layout_constraintTop_toBottomOf="@+id/item_list_original_size_label_tv" />
+
+    <TextView
+        android:id="@+id/item_list_width_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="@string/_00"
+        android:textSize="@dimen/_8ssp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/item_list_width_label_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_list_width_label_tv" />
+
+    <TextView
+        android:id="@+id/item_list_height_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:fontFamily="monospace"
+        android:text="@string/height"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintStart_toEndOf="@+id/item_list_width_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_list_width_label_tv" />
+
+    <TextView
+        android:id="@+id/item_list_height_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="@string/_00"
+        android:textSize="@dimen/_8ssp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/item_list_height_label_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_list_width_label_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
