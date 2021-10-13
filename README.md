@@ -2,7 +2,7 @@
 Aplikasi generate image dari Pexels API
 
 * This application using :
-  * PEXELS API
+  * PEXELS API -- https://www.pexels.com/api/
   * Grid and list recyclerview
   * Dependency Injection (Dagger2)
   * Constraint Layout
