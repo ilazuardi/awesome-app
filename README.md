@@ -3,6 +3,7 @@ Generate image app from Pexels API
 
 * This application using :
   * PEXELS API -- https://www.pexels.com/api/
+  * Retrofit and Gson for networking
   * Grid and list recyclerview
   * Dependency Injection (Dagger2)
   * Constraint Layout
