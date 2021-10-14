@@ -1,5 +1,5 @@
 # Awesome App
-Aplikasi generate image dari Pexels API
+Generate image app from Pexels API
 
 * This application using :
   * PEXELS API -- https://www.pexels.com/api/
