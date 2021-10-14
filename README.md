@@ -6,6 +6,7 @@ Generate image app from Pexels API
   * Retrofit and Gson for networking
   * Grid and list recyclerview
   * Dependency Injection (Dagger2)
+  * Coroutine Flow
   * Constraint Layout
 
 ![List](https://user-images.githubusercontent.com/30286532/137148472-96df9e5c-e4c4-479e-8f57-96706a2d6d97.jpeg)
